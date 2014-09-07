@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1"> 
+        <title>jsMediaMatrix</title> 
+        <link rel="stylesheet" href="css/jquery.mobile-1.1.0.css" />
+        <script type="text/javascript" src="jslib/jquery-1.7.2.js"></script>
+        <script type="text/javascript" src="jslib/jquery.mobile-1.1.0.js"></script>
+        <script type="text/javascript" src="jslib/spin.js"></script>      
+        <script type="text/javascript" src="jsmediamatrix.js"></script>
+        <script type="text/javascript" src="main.js"></script>      
+    </head>
+    <body>
+        <div data-role="page" id="home" class="type-home">
+            <div data-role="content">
+                <div>
+                    <h1>jsMediaMatrix JavaScript Library v0.8</h1>
+                    <p>Image Kansei(sentiments, impressions, emotions) analyzer for Smartphones &amp; Tablets</p>
+                    <p>Copyright 2012, Shuichi Kurabayashi &lt;kurabaya@sfc.keio.ac.jp&gt;<br/>Licensed under the GPL Version 3 license.<br/></p>
+                    <div>
+                        <label for="focus">Focus Center:</label> 
+                        <select name="focus" id="focus" data-role="slider">
+                            <option value="off">off</option>
+                            <option value="on">on</option>
+                        </select><br/>
+                    </div>
+                    <fieldset data-role="controlgroup" data-type="horizontal">
+                        <legend>Culture:</legend>
+                        <input type="radio" name="culture" id="CIS" value="CIS" checked="checked" />
+                        <label for="CIS">English</label>
+                        <input type="radio" name="culture" id="CIC" value="CIC"  />
+                        <label for="CIC">Japanese</label>
+                    </fieldset>
+                    <input type="file" id="imageFile" style="visibility: hidden" accept="image/*" capture="camera" />
+                    <input type="button" value="Take a Picture!" data-theme="b" id="dummyButton" />
+                </div>
+                <div id="spin"><br/><br/><br/>
+                </div>
+                <div id="result_content">
+                </div>
+            </div><!-- /content -->
+        </div><!-- /page --> 
+    </body>
+</html>
